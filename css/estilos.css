@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'WestayScript';
+    src: url('fonts/WestayScript.eot');
+    src: url('fonts/WestayScript.eot') format('embedded-type'), url('fonts/WestayScript.woff') format('woff'), url('fonts/WestayScript.ttf') format('truetype'), url('fonts/WestayScript.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-size: 62.5%;
+    /* Reset para usar la medida REM en vez de PX
+                        Convierte 16px a 10px normales
+                        1 rem = 1 px*/
+    /*Los rem reemplazan a los pixeles debido a que se adaptan mejor a una pantalla con mucha densidad de pixeles
+    la vista tal cual se ve en un ordenador común se verá en un teléfono de alta resolución*/
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100%;
+    min-height: 100vh;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#007fe0+0,004c70+100 */
+    background: rgb(0, 127, 224);
+    /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(0, 127, 224, 1) 0%, rgba(0, 76, 112, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 127, 224, 1) 0%, rgba(0, 76, 112, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 127, 224, 1) 0%, rgba(0, 76, 112, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#007fe0', endColorstr='#004c70', GradientType=0);
+    /* IE6-9 */
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+font-lato {
+    font-family: 'Lato', sans-serif;
+}
+
+div.logo {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0.41+99 */
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.41) 99%, rgba(0, 0, 0, 0.41) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.41) 99%, rgba(0, 0, 0, 0.41) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.41) 99%, rgba(0, 0, 0, 0.41) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#69000000', GradientType=0);
+    /* IE6-9 */
+}
+
+h2.mi-nombre {
+    /* font-family: 'WestayScript'!important; */
+    font-family: 'Dancing Script', cursive;
+    margin: 0;
+    color: white;
+    font-size: 7.5rem;
+    font-weight: 700;
+}
