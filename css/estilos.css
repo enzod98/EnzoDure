@@ -13,6 +13,8 @@ html {
                         1 rem = 1 px*/
     /*Los rem reemplazan a los pixeles debido a que se adaptan mejor a una pantalla con mucha densidad de pixeles
     la vista tal cual se ve en un ordenador común se verá en un teléfono de alta resolución*/
+    font-family: 'Open Sans', sans-serif;
+    color: white;
     box-sizing: border-box;
     min-height: 100vh;
 }
@@ -38,7 +40,6 @@ body {
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#007fe0', endColorstr='#004c70', GradientType=0);
     /* IE6-9 */
     background-attachment: fixed;
-    font-family: 'Open Sans', sans-serif;
 }
 
 img {
@@ -68,6 +69,7 @@ font-lato {
 div.logo {
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -89,4 +91,15 @@ h2.mi-nombre {
     color: white;
     font-size: 7.5rem;
     font-weight: 700;
+}
+
+img.logo-adobe {
+    height: 3rem;
+    width: 3rem;
+    margin-left: 1rem;
+}
+
+.avances {
+    display: flex;
+    justify-content: space-evenly;
 }
