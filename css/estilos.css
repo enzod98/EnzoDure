@@ -1,9 +1,6 @@
 @font-face {
-    font-family: 'WestayScript';
-    src: url('fonts/WestayScript.eot');
-    src: url('fonts/WestayScript.eot') format('embedded-type'), url('fonts/WestayScript.woff') format('woff'), url('fonts/WestayScript.ttf') format('truetype'), url('fonts/WestayScript.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Baron Neue';
+    src: url("../fonts/Baron\ Neue.otf");
 }
 
 html {
@@ -26,21 +23,24 @@ html {
 }
 
 body {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,007fe0+100 */
+    background: rgb(0, 0, 0);
+    /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 127, 224, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 127, 224, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 127, 224, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#007fe0', GradientType=0);
+    /* IE6-9 */
     height: 100%;
     min-height: 100vh;
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#007fe0+0,004c70+100 */
-    background: rgb(0, 127, 224);
-    /* Old browsers */
-    background: -moz-linear-gradient(top, rgba(0, 127, 224, 1) 0%, rgba(0, 76, 112, 1) 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(0, 127, 224, 1) 0%, rgba(0, 76, 112, 1) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(0, 127, 224, 1) 0%, rgba(0, 76, 112, 1) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#007fe0', endColorstr='#004c70', GradientType=0);
-    /* IE6-9 */
     background-attachment: fixed;
 }
+
+
+/* Estilos globales */
 
 img {
     max-width: 100%;
@@ -66,6 +66,21 @@ font-lato {
     font-family: 'Lato', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.contenedor {
+    padding: 0 10px;
+}
+
+
+/* Cortina de presentación */
+
 div.logo {
     height: 100%;
     display: flex;
@@ -84,8 +99,8 @@ div.logo {
     /* IE6-9 */
 }
 
-h2.mi-nombre {
-    /* font-family: 'WestayScript'!important; */
+.firma {
+    text-align: center;
     font-family: 'Dancing Script', cursive;
     margin: 0;
     color: white;
@@ -103,3 +118,52 @@ img.logo-adobe {
     display: flex;
     justify-content: space-evenly;
 }
+
+
+/* Navegación */
+
+nav.navegacion {
+    display: block;
+}
+
+.separador {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav a {
+    color: white;
+    font-size: 1.8rem;
+}
+
+
+/* Presentación en Parallax */
+
+.parallax {
+    height: 100vh;
+    background-image: url("../img/fondo-parallax.png");
+    background-position: center center;
+    background-size: cover;
+}
+
+.presentacion {
+    margin-top: 6rem;
+}
+
+.presentacion p {
+    text-align: center;
+    font-family: 'Baron Neue';
+    font-size: 4rem;
+    margin: 0;
+}
+
+.site-header {
+    background: rgb(0, 0, 0);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5466561624649859) 0%, rgba(0, 0, 0, 0.8) 48%, rgba(0, 0, 0, 0.8) 100%);
+    height: 100%;
+}
+
+
+/* Estilos para el header */
