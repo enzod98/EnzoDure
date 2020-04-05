@@ -20,7 +20,7 @@ html {
     font-family: 'Open Sans', sans-serif;
     color: white;
     box-sizing: border-box;
-    min-height: 300vh;
+    min-height: 100vh;
 }
 
 *,
@@ -59,8 +59,6 @@ h1 {
 
 h2 {
     font-size: 3.4rem;
-    font-family: 'Lato', sans-serif;
-    margin: 0;
 }
 
 h3 {
@@ -77,6 +75,7 @@ font-lato {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 a:hover {
@@ -97,6 +96,11 @@ a:hover {
 
 .oculto {
     display: none;
+}
+
+.subtitulos {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
 }
 
 
@@ -217,6 +221,7 @@ nav a {
     background-image: url("../img/fondo-parallax.png");
     background-position: center center;
     background-size: cover;
+    margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -249,9 +254,66 @@ nav a {
 /* Estilos para las tarjetas */
 
 .tarjeta {
-    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 40px 20px;
     background-color: var(--colorAzulTarjetas);
     width: 100%;
     border-radius: 20px;
+}
+
+.tarjeta h2 {
+    margin: 0 0 20px 0;
+}
+
+h3.subtitulos {
+    margin: .5rem 0;
+}
+
+
+/* Estilos para el blog */
+
+.entrada::after {
+    content: '';
+    margin: 3rem auto;
+    width: 25rem;
+    border: 1px solid #e1e1e1;
+    display: block;
+}
+
+.entrada:last-of-type::after {
+    display: none;
+}
+
+.contenido a {
+    display: block;
+    text-align: right;
+    color: white;
+    font-weight: 700;
+}
+
+
+/* Estilos para la tarjeta Proyectos */
+
+.proyectos .entrada h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* Estilos para la tarjeta certificaciones */
+
+.lista-certificados li a h4 {
+    margin: 0 0 10px 0;
+}
+
+
+/* Estilo para la tarheta fotos */
+
+.contenido.fotos p {
+    text-align: center;
+    font-style: italic;
+}
+
+.img-borde {
+    border: 10px solid blue;
 }
