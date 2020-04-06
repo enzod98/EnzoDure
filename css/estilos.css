@@ -383,7 +383,7 @@ h3.subtitulos {
 @media only screen and (max-width: 768px) {
     .site-footer {
         max-height: unset;
-        height: 100vh;
+        width: 75vw;
         /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,207cca+100,2989d8+100,007fe0+100 */
         background: #000000;
         /* Old browsers */
@@ -414,7 +414,7 @@ h3.subtitulos {
         justify-content: space-between;
         align-items: center;
         padding-left: 1rem;
-        width: 66%;
+        width: 100%;
         margin: 0 auto 0 0;
     }
 }

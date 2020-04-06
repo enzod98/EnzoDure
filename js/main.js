@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log("se cargó bien");
 
-
+    $('.menu-movil').hide();
     /* Con el siguiente método fixeamos la barra del header cuando hagamos mucho scroll */
     var anchoVentana = $(window).width();
 
-    /* if (anchoVentana < 768) {
-        $('.site-footer').addClass('oculto');
-    } */
+    if (anchoVentana < 768) {
+        $('.site-footer').hide();
+    }
 
     var altoVentana = $(window).height();
 
@@ -28,31 +28,49 @@ document.addEventListener('DOMContentLoaded', function() {
             if (scroll > (altoVentana - 70)) {
                 $('header').addClass('barra-header');
                 $('.navegacion').hide();
-                $('.menu-movil').removeClass('oculto');
-                margenSuperior(anchoVentana, altoVentana);
+                $('.menu-movil').show();
+                margenSuperior();
             } else {
                 $('header').removeClass('barra-header');
                 $('.navegacion').show();
-                $('.menu-movil').addClass('oculto');
+                $('.menu-movil').hide();
                 $('body').css({ 'margin-top': 0 });
             }
         }
 
-        function margenSuperior(anchoVentana, altoVentana) {
+        function margenSuperior() {
             var barraAltura = $('.barra-header').innerHeight();
             $('body').css({ 'margin-top': (barraAltura * 2) + 'px' });
-            if (anchoVentana != 0) {
-                $('.site-footer').css({ 'height': (altoVentana - barraAltura) + 'px' });
-            }
         }
 
     })
 
     //Menú Responsive
     $('.menu-movil').on('click', function() {
-        $('.side-footer');
+        $('.site-footer').animate({
+            width: "toggle",
+            opacity: "toggle"
+
+        })
+        $('.site-footer').css({ 'position': 'fixed', 'top': 0, 'left': 0, 'z-index': 3, 'height': 100 + '%' });
+        switchScroll();
     });
 
+    var scrolling = true;
 
+    function switchScroll() {
+        if (scrolling) {
+            scrolling = false;
+            $('html, body').css({
+                'overflow': 'hidden'
+            });
+            console.log('bloquea el scroll');
+        } else {
+            scrolling = true;
+            $('html, body').css({
+                'overflow': 'auto'
+            });
+        }
+    }
 
 });
