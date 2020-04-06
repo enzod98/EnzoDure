@@ -258,7 +258,7 @@ nav a {
     .contenedor-main {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        grid-template-rows: repeat(6, 1fr);
+        grid-template-rows: repeat(5, 1fr);
         gap: 2rem;
         margin-bottom: 2rem;
     }
@@ -293,18 +293,36 @@ h3.subtitulos {
 
 /* Estilos para el blog */
 
+.imagen-entrada {
+    height: 200px;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+
+.imagen-entrada.blog {
+    background-image: url('../img/blog1.jpg');
+}
+
+.imagen-entrada.fotos {
+    background-image: url('../img/cena.jpg');
+}
+
+.imagen-entrada.proyectos {
+    background-image: url('../img/blog-de-cafe.png');
+}
+
 @media only screen and (min-width: 768px) {
     .tarjeta.blog {
-        grid-row: 1 / 7;
+        grid-row: 1 / 6;
         grid-column: 1 / 2;
         padding: 40px 60px;
     }
-    .imagen-entrada.blog {
-        max-height: 300px;
+    .imagen-entrada {
+        height: 300px;
     }
-    .img-blog {
-        width: 100%;
-        height: auto;
+    .imagen-entrada.proyectos {
+        height: 200px;
     }
 }
 
@@ -362,7 +380,7 @@ h3.subtitulos {
 
 @media only screen and (min-width: 768px) {
     .tarjeta.fotos {
-        grid-row: 4 / 7;
+        grid-row: 4 / 6;
     }
 }
 
