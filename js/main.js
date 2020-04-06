@@ -4,13 +4,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     /* Con el siguiente método fixeamos la barra del header cuando hagamos mucho scroll */
     var anchoVentana = $(window).width();
+
+    /* if (anchoVentana < 768) {
+        $('.site-footer').addClass('oculto');
+    } */
+
     var altoVentana = $(window).height();
 
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
         /* Si es mayor a 400 porque nuestro parallax mide eso en px y 768 porque es en nuestra versión escritorio */
         if (anchoVentana > 768) {
-            if (scroll > 400) {
+            if (scroll > 380) {
                 $('header').addClass('barra-header contenedor');
                 $('div.separador').addClass('separador-inactivo');
                 margenSuperior();
@@ -20,11 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 $('body').css({ 'margin-top': 0 });
             }
         } else {
-            if (scroll > altoVentana) {
+            if (scroll > (altoVentana - 70)) {
                 $('header').addClass('barra-header');
                 $('.navegacion').hide();
                 $('.menu-movil').removeClass('oculto');
-                margenSuperior();
+                margenSuperior(anchoVentana, altoVentana);
             } else {
                 $('header').removeClass('barra-header');
                 $('.navegacion').show();
@@ -33,12 +38,20 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
-        function margenSuperior() {
+        function margenSuperior(anchoVentana, altoVentana) {
             var barraAltura = $('.barra-header').innerHeight();
-            $('body').css({ 'margin-top': (barraAltura + 100) + 'px' });
+            $('body').css({ 'margin-top': (barraAltura * 2) + 'px' });
+            if (anchoVentana != 0) {
+                $('.site-footer').css({ 'height': (altoVentana - barraAltura) + 'px' });
+            }
         }
 
     })
+
+    //Menú Responsive
+    $('.menu-movil').on('click', function() {
+        $('.side-footer');
+    });
 
 
 
