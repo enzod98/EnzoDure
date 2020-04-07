@@ -83,7 +83,7 @@ a:hover {
 }
 
 .contenedor {
-    padding: 0 10px;
+    padding: 0 10px 0 10px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -116,6 +116,13 @@ a:hover {
 
 .firma.firma-header {
     text-align: center;
+    font-size: 6rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .firma.firma-header {
+        font-size: 7rem;
+    }
 }
 
 img.logo-adobe {
@@ -136,10 +143,12 @@ img.logo-adobe {
 
 header.barra-header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
+    left: 0;
+    padding: 0 10px;
     width: 100%;
     z-index: 2;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,207cca+100,2989d8+100,007fe0+100 */
@@ -154,23 +163,26 @@ header.barra-header {
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#007fe0', GradientType=0);
     /* IE6-9 */
     background-attachment: fixed;
-    padding-bottom: 1rem;
+    padding-bottom: .5rem;
+}
+
+@media only screen and (min-width: 768px) {
+    header.barra-header {
+        padding-bottom: 1rem;
+        left: unset;
+    }
 }
 
 
 /* añade un color de fondo a la barra que agarre todo el ancho del body y no sòlo del contenedor */
 
-@media only screen and (min-width: 768px) {
-    header.barra-header {
-        justify-content: space-between;
-    }
-}
-
 .menu-movil {
     text-decoration: none;
     color: white;
-    font-size: 6.5rem;
-    text-align: right;
+    font-size: 7rem;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 
 
@@ -234,21 +246,45 @@ nav a {
     }
 }
 
+.contenedor-presentacion {
+    height: 100%;
+}
+
 .presentacion {
-    margin-top: 6rem;
+    height: 70%;
+    display: flex;
+    align-items: center;
 }
 
 .presentacion p {
     text-align: center;
+    vertical-align: middle;
     font-family: 'Baron Neue';
-    font-size: 4rem;
+    font-size: 3.2rem;
     margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .presentacion p {
+        font-size: 4rem;
+        margin-top: 4rem;
+    }
 }
 
 .site-header {
     background: rgb(0, 0, 0);
     background: radial-gradient(circle, rgba(0, 0, 0, 0.5466561624649859) 0%, rgba(0, 0, 0, 0.8) 48%, rgba(0, 0, 0, 0.8) 100%);
     height: 100%;
+}
+
+.site-header .contenedor {
+    height: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .site-header .contenedor {
+        height: unset;
+    }
 }
 
 
