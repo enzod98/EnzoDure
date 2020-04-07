@@ -25,13 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 $('body').css({ 'margin-top': 0 });
             }
         } else {
-            if (scroll > (altoVentana - 70)) {
-                $('header').addClass('barra-header');
+            if (scroll > (altoVentana)) {
+                $('header').addClass('barra-header ');
                 $('.navegacion').hide();
                 $('.menu-movil').show();
                 margenSuperior();
             } else {
-                $('header').removeClass('barra-header');
+                $('header').removeClass('barra-header ');
                 $('.navegacion').show();
                 $('.menu-movil').hide();
                 $('body').css({ 'margin-top': 0 });
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function margenSuperior() {
             var barraAltura = $('.barra-header').innerHeight();
-            $('body').css({ 'margin-top': (barraAltura * 2) + 'px' });
+            $('body').css({ 'margin-top': (barraAltura) + 'px' });
         }
 
     })
