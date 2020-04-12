@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: 'Baron Neue';
-    src: url("../fonts/Baron\ Neue.otf");
+    src: url("../fonts/Baron Neue.otf");
 }
 
 html {
@@ -84,6 +84,8 @@ a:hover {
 
 .contenedor {
     padding: 0 10px 0 10px;
+    left: 0;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
