@@ -1,0 +1,16 @@
+{
+    "name": "blog-personal",
+    "version": "1.0.0",
+    "description": "Un blog sobre Enzo Duré",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server/app",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Enzo Duré",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "hbs": "^4.1.1"
+    }
+}
