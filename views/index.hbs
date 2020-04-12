@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Estas etiquetas forzarán a que el navegador no tenga en cuenta el caché, teniendo que descargar de nuevo nuestros estilos actualizados -->
-    <meta http-equiv="Expires" content="0">
-
-    <meta http-equiv="Last-Modified" content="0">
-
-    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
-
-    <meta http-equiv="Pragma" content="no-cache">
-    <!--  -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:600,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/fontAwesome.css">
-    <link rel="stylesheet" href="css/estilos.css">
-    <title>Enzo Duré</title>
-</head>
-
-<body>
+{{> head }}
     <div class="parallax">
         <div class="site-header">
             <div class="contenedor">
@@ -170,40 +146,4 @@
     </main>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-
-    <footer class="site-footer">
-        <div class="contenedor">
-            <div class="firma-footer">
-                <h2 class="firma">Enzo Duré</h2>
-                <p>©2020</p>
-                <p>Todos los derechos reservados</p>
-            </div>
-            <nav class="navegacion-footer">
-                <div class="separador">
-                    <a href="#">Blog</a>
-                    <a href="#">Proyectos</a>
-                    <a href="#">Galeria</a>
-                </div>
-                <div class="separador">
-                    <a href="#">¿Quién soy?</a>
-                    <a href="#">Contacto</a>
-                </div>
-            </nav>
-            <nav class="mis-redes">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </nav>
-
-    </footer>
-
-</body>
-
-
-
-</html>
+{{> foot}}
