@@ -191,6 +191,7 @@ header.barra-header {
 /* Este estilo se aplica sólo cuando en desktop se haga un scroll de 400px, quitando añadiendo márgen entre los enlaces del nav */
 
 .separador-inactivo a {
+    margin-top: 0;
     margin-left: 30px;
 }
 
@@ -209,10 +210,13 @@ nav.navegacion {
 }
 
 .separador {
-    margin-top: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.separador.header {
+    margin-top: 2rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -498,7 +502,7 @@ h3.subtitulos {
         width: 100%;
     }
     .firma-footer h2.firma {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 }
 
@@ -510,6 +514,7 @@ h3.subtitulos {
 @media only screen and (max-width: 768px) {
     .navegacion-footer {
         flex-direction: column;
+        align-items: center;
         width: 100%;
     }
 }
@@ -523,6 +528,7 @@ h3.subtitulos {
 
 @media only screen and (max-width: 768px) {
     .navegacion-footer .separador {
+        margin-top: 0;
         width: 100%;
     }
     .navegacion-footer .separador:last-of-type {
@@ -537,7 +543,7 @@ h3.subtitulos {
 
 @media only screen and (max-width: 768px) {
     .navegacion-footer .separador a {
-        margin-top: 30px;
+        margin-top: unset;
     }
 }
 

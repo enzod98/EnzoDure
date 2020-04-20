@@ -10,31 +10,38 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     var altoVentana = $(window).height();
+    let barraActivada = false;
 
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
         /* Si es mayor a 400 porque nuestro parallax mide eso en px y 768 porque es en nuestra versión escritorio */
         if (anchoVentana > 768) {
-            if (scroll > 380) {
-                $('header').addClass('barra-header contenedor');
+            if (scroll > 380 && barraActivada === false) {
+                $('header').addClass('barra-header contenedor').hide();
                 $('div.separador').addClass('separador-inactivo');
-                margenSuperior();
-            } else {
+                $('header').slideDown();
+                barraActivada = true;
+                // margenSuperior();
+            } else if (scroll < 380) {
                 $('header').removeClass('barra-header contenedor');
                 $('div.separador').removeClass('separador-inactivo');
-                $('body').css({ 'margin-top': 0 });
+                barraActivada = false;
+                // $('body').css({ 'margin-top': 0 });
             }
         } else {
-            if (scroll > (altoVentana)) {
-                $('header').addClass('barra-header ');
+            if (scroll > (altoVentana) && barraActivada === false) {
+                $('header').addClass('barra-header ').hide();
                 $('.navegacion').hide();
                 $('.menu-movil').show();
-                margenSuperior();
-            } else {
+                $('header').slideDown();
+                barraActivada = true;
+                // margenSuperior();
+            } else if (scroll < altoVentana) {
                 $('header').removeClass('barra-header ');
                 $('.navegacion').show();
                 $('.menu-movil').hide();
-                $('body').css({ 'margin-top': 0 });
+                barraActivada = false;
+                // $('body').css({ 'margin-top': 0 });
             }
         }
 
@@ -56,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         switchScroll();
     });
 
+    /* El siguiente bloque es para bloquear o desbloquear el scroll al utilizar el menú en móviles */
     var scrolling = true;
 
     function switchScroll() {
@@ -64,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
             $('html, body').css({
                 'overflow': 'hidden'
             });
-            console.log('bloquea el scroll');
         } else {
             scrolling = true;
             $('html, body').css({
