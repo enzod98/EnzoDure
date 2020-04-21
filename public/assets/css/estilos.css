@@ -30,7 +30,7 @@ html {
 }
 
 body {
-    height: 100%;
+    min-height: 100vh;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,207cca+100,2989d8+100,007fe0+100 */
     background: #000000;
     /* Old browsers */
@@ -103,6 +103,11 @@ a:hover {
 .subtitulos {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
+}
+
+h1.subtitulos {
+    text-align: center;
+    text-transform: uppercase;
 }
 
 
@@ -267,7 +272,7 @@ nav a {
     vertical-align: middle;
     font-family: 'Baron Neue';
     font-size: 3.2rem;
-    margin: 0;
+    margin: 15vh 0 0 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -283,10 +288,6 @@ nav a {
     height: 100%;
 }
 
-.site-header .contenedor {
-    height: 100%;
-}
-
 @media only screen and (min-width: 768px) {
     .site-header .contenedor {
         height: unset;
@@ -297,12 +298,17 @@ nav a {
 /* Main */
 
 @media only screen and (min-width: 768px) {
-    .contenedor-main {
+    .grilla-main {
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-rows: repeat(5, 1fr);
         gap: 2rem;
         margin-bottom: 2rem;
+    }
+    .grilla-3-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
     }
 }
 
@@ -321,6 +327,9 @@ nav a {
     .tarjeta {
         margin: 0;
         padding: 40px 30px;
+    }
+    .tarjeta.grilla-3-3 {
+        padding: 5rem;
     }
 }
 
@@ -376,7 +385,7 @@ h3.subtitulos {
     display: block;
 }
 
-.entrada:last-of-type::after {
+.tarjeta.blog .entrada:last-of-type::after {
     display: none;
 }
 
@@ -513,6 +522,7 @@ h3.subtitulos {
 
 @media only screen and (max-width: 768px) {
     .navegacion-footer {
+        margin-top: 5rem;
         flex-direction: column;
         align-items: center;
         width: 100%;
@@ -537,13 +547,17 @@ h3.subtitulos {
 }
 
 .navegacion-footer .separador a {
-    margin-top: 10px;
+    margin-top: 1rem;
     width: 100%;
+}
+
+.navegacion-footer .separador a:first-of-type {
+    margin-top: 0;
 }
 
 @media only screen and (max-width: 768px) {
     .navegacion-footer .separador a {
-        margin-top: unset;
+        margin-top: 3rem!important;
     }
 }
 
@@ -562,4 +576,58 @@ nav.mis-redes {
         row-gap: 20px;
         width: 80%;
     }
+}
+
+
+/* Estilos para la páginas secundarias */
+
+.contenedor-pagina-sec {
+    margin: 2rem auto;
+}
+
+
+/* Estilos para el formulario */
+
+form {
+    display: block;
+}
+
+@media only screen and (max-width: 768px) {
+    form h2.subtitulos {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
+
+.campo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+label {
+    margin-bottom: .5rem;
+}
+
+input {
+    margin-bottom: 2rem;
+}
+
+textarea {
+    height: 200px;
+}
+
+.boton {
+    background-color: transparent;
+    padding: 1rem;
+    display: inline-block;
+    margin: 2rem 0 0 0;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2rem;
+    border-radius: 1rem;
+    border: .5px solid white;
+    width: 100%;
 }
