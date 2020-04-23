@@ -1,0 +1,42 @@
+{{> head }}
+
+
+{{> siteHeader }}
+
+<main class="contenedor contenedor-pagina-sec">
+    <h1 class="subtitulos">Contacto</h1>
+    <div class="tarjeta">
+        <form action="#">
+            <h2 class="subtitulos">Puedes contactarme rellenando todos los campos.</h2>
+            <div class="contenedor-campos">
+
+                <div class="campo">
+                    <label>Nombre: </label>
+                    <input type="text" name="nombre" placeholder="Su nombre.">
+                </div>
+
+                <div class="campo">
+                    <label>Teléfono: </label>
+                    <input type="tel" name="nombre" placeholder="Su teléfono.">
+                </div>
+
+                <div class="campo">
+                    <label>Correo electrónico: </label>
+                    <input type="mail" name="nombre" placeholder="Su correo.">
+                </div>
+
+                <div class="campo mensaje">
+                    <label>Mensaje:</label>
+                    <textarea placeholder="Su mensaje."></textarea>
+                </div>
+
+            </div><!-- .contenido-campos -->
+
+            <div class="enviar">
+                <input type="submit" class="boton" value="Enviar">
+            </div>
+        </form>
+    </div>
+</main>
+
+{{> foot}}

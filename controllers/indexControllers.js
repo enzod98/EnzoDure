@@ -1,0 +1,10 @@
+const express = require('express');
+const app = express();
+
+app.use(require('./home'));
+app.use(require('./blog'));
+app.use(require('./proyectos'));
+app.use(require('./galeria'));
+app.use(require('./contacto'));
+
+module.exports = app;

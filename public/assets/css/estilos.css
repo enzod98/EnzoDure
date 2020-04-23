@@ -30,7 +30,7 @@ html {
 }
 
 body {
-    height: 100%;
+    min-height: 100vh;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,207cca+100,2989d8+100,007fe0+100 */
     background: #000000;
     /* Old browsers */
@@ -103,6 +103,11 @@ a:hover {
 .subtitulos {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
+}
+
+h1.subtitulos {
+    text-align: center;
+    text-transform: uppercase;
 }
 
 
@@ -181,7 +186,7 @@ header.barra-header {
 .menu-movil {
     text-decoration: none;
     color: white;
-    font-size: 7rem;
+    font-size: 5.5rem;
     flex: 1;
     display: flex;
     justify-content: flex-end;
@@ -191,6 +196,7 @@ header.barra-header {
 /* Este estilo se aplica sólo cuando en desktop se haga un scroll de 400px, quitando añadiendo márgen entre los enlaces del nav */
 
 .separador-inactivo a {
+    margin-top: 0;
     margin-left: 30px;
 }
 
@@ -209,16 +215,26 @@ nav.navegacion {
 }
 
 .separador {
-    margin-top: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.separador.header {
+    margin-top: 2rem;
+}
+
+.separador.header:last-of-type {
+    margin-left: 4rem;
 }
 
 @media only screen and (min-width: 768px) {
     .separador {
         justify-content: space-around;
         flex: 1;
+    }
+    .separador.header:last-of-type {
+        margin-left: 0;
     }
 }
 
@@ -263,7 +279,7 @@ nav a {
     vertical-align: middle;
     font-family: 'Baron Neue';
     font-size: 3.2rem;
-    margin: 0;
+    margin: 15vh 0 0 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -279,10 +295,6 @@ nav a {
     height: 100%;
 }
 
-.site-header .contenedor {
-    height: 100%;
-}
-
 @media only screen and (min-width: 768px) {
     .site-header .contenedor {
         height: unset;
@@ -293,12 +305,17 @@ nav a {
 /* Main */
 
 @media only screen and (min-width: 768px) {
-    .contenedor-main {
+    .grilla-main {
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-rows: repeat(5, 1fr);
         gap: 2rem;
         margin-bottom: 2rem;
+    }
+    .grilla-3-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
     }
 }
 
@@ -317,6 +334,9 @@ nav a {
     .tarjeta {
         margin: 0;
         padding: 40px 30px;
+    }
+    .tarjeta.grilla-3-3 {
+        padding: 5rem;
     }
 }
 
@@ -372,7 +392,7 @@ h3.subtitulos {
     display: block;
 }
 
-.entrada:last-of-type::after {
+.tarjeta.blog .entrada:last-of-type::after {
     display: none;
 }
 
@@ -498,7 +518,7 @@ h3.subtitulos {
         width: 100%;
     }
     .firma-footer h2.firma {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 }
 
@@ -509,7 +529,9 @@ h3.subtitulos {
 
 @media only screen and (max-width: 768px) {
     .navegacion-footer {
+        margin-top: 5rem;
         flex-direction: column;
+        align-items: center;
         width: 100%;
     }
 }
@@ -523,6 +545,7 @@ h3.subtitulos {
 
 @media only screen and (max-width: 768px) {
     .navegacion-footer .separador {
+        margin-top: 0;
         width: 100%;
     }
     .navegacion-footer .separador:last-of-type {
@@ -531,13 +554,17 @@ h3.subtitulos {
 }
 
 .navegacion-footer .separador a {
-    margin-top: 10px;
+    margin-top: 1rem;
     width: 100%;
+}
+
+.navegacion-footer .separador a:first-of-type {
+    margin-top: 0;
 }
 
 @media only screen and (max-width: 768px) {
     .navegacion-footer .separador a {
-        margin-top: 30px;
+        margin-top: 3rem!important;
     }
 }
 
@@ -556,4 +583,75 @@ nav.mis-redes {
         row-gap: 20px;
         width: 80%;
     }
+}
+
+
+/* Estilos para la páginas secundarias */
+
+.contenedor-pagina-sec {
+    margin: 2rem auto;
+}
+
+
+/* Estilos para el formulario */
+
+form {
+    display: block;
+}
+
+@media only screen and (max-width: 768px) {
+    form h2.subtitulos {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+.campo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+@media only screen and (min-width: 768px) {}
+
+label {
+    margin-bottom: .5rem;
+}
+
+input {
+    margin-bottom: 2rem;
+}
+
+textarea {
+    height: 200px;
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .campo.mensaje {
+        grid-column: 1/4;
+    }
+}
+
+.boton {
+    background-color: transparent;
+    padding: 1rem;
+    display: inline-block;
+    margin: 2rem 0 0 0;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2rem;
+    border-radius: 1rem;
+    border: .5px solid white;
+    width: 100%;
 }
