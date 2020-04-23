@@ -186,7 +186,7 @@ header.barra-header {
 .menu-movil {
     text-decoration: none;
     color: white;
-    font-size: 7rem;
+    font-size: 5.5rem;
     flex: 1;
     display: flex;
     justify-content: flex-end;
@@ -224,10 +224,17 @@ nav.navegacion {
     margin-top: 2rem;
 }
 
+.separador.header:last-of-type {
+    margin-left: 4rem;
+}
+
 @media only screen and (min-width: 768px) {
     .separador {
         justify-content: space-around;
         flex: 1;
+    }
+    .separador.header:last-of-type {
+        margin-left: 0;
     }
 }
 
@@ -599,12 +606,22 @@ form {
     }
 }
 
+@media only screen and (min-width: 768px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
 .campo {
     width: 100%;
     display: flex;
     flex-direction: column;
     font-size: 2rem;
 }
+
+@media only screen and (min-width: 768px) {}
 
 label {
     margin-bottom: .5rem;
@@ -616,6 +633,13 @@ input {
 
 textarea {
     height: 200px;
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    .campo.mensaje {
+        grid-column: 1/4;
+    }
 }
 
 .boton {
