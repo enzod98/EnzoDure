@@ -6,5 +6,6 @@ app.use(require('./blog'));
 app.use(require('./proyectos'));
 app.use(require('./galeria'));
 app.use(require('./contacto'));
+app.use(require('./certificado'));
 
 module.exports = app;

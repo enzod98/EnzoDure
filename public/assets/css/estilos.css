@@ -90,6 +90,10 @@ a:hover {
     margin: 0 auto;
 }
 
+.centro {
+    text-align: center!important;
+}
+
 @media only screen and (min-width: 768px) {
     .contenedor {
         padding: 0;
@@ -222,19 +226,26 @@ nav.navegacion {
 
 .separador.header {
     margin-top: 2rem;
+    text-align: center;
+    width: 100%;
 }
 
-.separador.header:last-of-type {
-    margin-left: 4rem;
-}
+
+/* Bandera */
 
 @media only screen and (min-width: 768px) {
     .separador {
         justify-content: space-around;
+        width: 100%;
         flex: 1;
     }
     .separador.header:last-of-type {
         margin-left: 0;
+    }
+    .separador a {
+        flex: 1;
+        width: 100%;
+        white-space: nowrap;
     }
 }
 
@@ -351,37 +362,34 @@ h3.subtitulos {
 
 /* Estilos para el blog */
 
-.imagen-entrada {
-    height: 200px;
-    width: 100%;
-    background-position: center center;
-    background-size: cover;
-}
-
-.imagen-entrada.blog {
-    background-image: url('../img/blog1.jpg');
-}
-
-.imagen-entrada.fotos {
-    background-image: url('../img/cena.jpg');
-}
-
-.imagen-entrada.proyectos {
-    background-image: url('../img/blog-de-cafe.png');
-}
-
 @media only screen and (min-width: 768px) {
     .tarjeta.blog {
         grid-row: 1 / 6;
         grid-column: 1 / 2;
         padding: 40px 60px;
     }
+}
+
+.imagen-entrada {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    max-height: 200px;
+}
+
+@media only screen and (min-width: 768px) {
     .imagen-entrada {
-        height: 300px;
+        max-height: 350px;
+        min-height: 0;
     }
-    .imagen-entrada.proyectos {
-        height: 200px;
+    .imagen-entrada.fotos {
+        max-height: 250px;
+        min-height: 0;
     }
+}
+
+.imagen-entrada img {
+    min-width: 100%;
 }
 
 .entrada::after {
@@ -556,6 +564,13 @@ h3.subtitulos {
 .navegacion-footer .separador a {
     margin-top: 1rem;
     width: 100%;
+    text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+    .navegacion-footer .separador a {
+        margin-top: 1rem auto 0 auto;
+    }
 }
 
 .navegacion-footer .separador a:first-of-type {
@@ -654,4 +669,11 @@ textarea {
     border-radius: 1rem;
     border: .5px solid white;
     width: 100%;
+}
+
+
+/* Estilos para la página de certificados */
+
+#contenedor-certificados a {
+    margin-top: 2rem;
 }
