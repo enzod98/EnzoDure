@@ -14,7 +14,7 @@ require('../views/helpers/helpers')
 
 //Motor HBS
 //definimos la carpeta estática pública
-app.use(express.static(path.resolve(__dirname, '../public')));
+app.use(express.static(path.resolve(__dirname, '../public/')));
 
 //Con esto le decimos a express que nuestro motor de plantillas HTML será HBS
 

@@ -153,6 +153,13 @@ h1.subtitulos {
     text-overflow: ellipsis;
 }
 
+.clearfix,
+::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
 
 /* Cortina de presentación */
 
@@ -714,7 +721,31 @@ textarea {
 
 /* Estilos para la página de Blog */
 
+.cabecera-blog-unico {
+    margin-bottom: 1.5rem;
+}
+
+.cabecera-blog-unico h2 {
+    margin-bottom: .5rem;
+    font-size: 4rem;
+}
+
+.articulo-completo {
+    font-size: 1.2rem;
+}
+
 p.categoria {
     margin: 0 0 .5rem 0;
     font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .imagen-entrada.blog-por-id {
+        float: left;
+        margin: 0 2rem 1rem 0;
+    }
+    .articulo-completo {
+        font-size: 1.6rem;
+        line-height: 2.5rem
+    }
 }
