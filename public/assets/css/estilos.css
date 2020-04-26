@@ -151,6 +151,14 @@ h1.subtitulos {
     height: 8vh;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+.texto {
+    font-size: 1.6rem;
+    font-weight: 200;
+    text-align: justify;
 }
 
 .clearfix,
@@ -158,6 +166,14 @@ h1.subtitulos {
     display: block;
     content: "";
     clear: both;
+}
+
+@media only screen and (min-width: 768px) {
+    .float-left {
+        float: left;
+        margin: 0 2rem 1rem 0;
+        max-width: 720px;
+    }
 }
 
 
@@ -360,14 +376,18 @@ nav a {
 }
 
 
-/* Main */
+/* Grillas */
 
 @media only screen and (min-width: 768px) {
-    .grilla-main {
+    .grilla-columna-2fr-1fr {
         display: grid;
         grid-template-columns: 2fr 1fr;
+        column-gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    .fila-2fr-1fr {
         grid-template-rows: repeat(5, 1fr);
-        gap: 2rem;
+        row-gap: 2rem;
         margin-bottom: 2rem;
     }
     .grilla-3-3 {
@@ -730,22 +750,25 @@ textarea {
     font-size: 4rem;
 }
 
-.articulo-completo {
-    font-size: 1.2rem;
-}
-
 p.categoria {
     margin: 0 0 .5rem 0;
     font-size: 1.5rem;
 }
 
 @media only screen and (min-width: 768px) {
-    .imagen-entrada.blog-por-id {
-        float: left;
-        margin: 0 2rem 1rem 0;
-    }
     .articulo-completo {
         font-size: 1.6rem;
         line-height: 2.5rem
     }
+}
+
+
+/* Página Proyectos */
+
+.proyectos.entrada::after {
+    content: '';
+    margin: 3rem auto;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    display: block;
 }

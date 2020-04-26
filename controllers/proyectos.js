@@ -1,10 +1,22 @@
 const express = require('express');
 const app = express();
 
+const Proyecto = require('../models/proyecto');
+
 app.get('/proyectos', (req, res) => {
 
+    Proyecto.find()
+        .exec((err, proyectoDB) => {
+            if (err) {
+                return res.status(500).json({
+                    ok: false,
+                    err
+                })
+            }
 
-    res.render('proyectos');
+            res.render('proyectos', { proyectoDB });
+
+        })
 
 });
 

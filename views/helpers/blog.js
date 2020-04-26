@@ -38,10 +38,10 @@ hbs.registerHelper('listarArticulo', (articuloDB) => {
             <i>${ articuloDB.fechaCreacion } </i>
         </div>
         <div class="contenido">
-            <div class="imagen-entrada blog-por-id">
+            <div class="imagen-entrada float-left">
                 <img src="${ articuloDB.img }" alt="">
             </div>
-            <p class="articulo-completo"> ${ articuloDB.contenido }</p>
+            <p class="texto"> ${ articuloDB.contenido }</p>
         </div>`
 
     return new hbs.SafeString(devolucion);

@@ -4,6 +4,7 @@ const hbs = require('hbs');
 
 hbs.registerHelper(require('./certificados'));
 hbs.registerHelper(require('./blog'));
+hbs.registerHelper(require('./proyectos'));
 
 module.exports = {
     hbs
