@@ -7,7 +7,7 @@ hbs.registerHelper('listarProyectos', (proyectoDB) => {
 
     for (let i = 0; i < proyectoDB.length; i++) {
         devolucion +=
-            `<div class="proyectos entrada">
+            `<div class="proyectos entrada" id=${ proyectoDB[i]._id }>
             <div class="contenido">
                 <h3 class="subtitulos">${ proyectoDB[i].nombre }</h3>
                 <div class="clearfix">

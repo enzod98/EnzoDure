@@ -7,7 +7,7 @@ hbs.registerHelper('listarCertificados', (certificadoDB) => {
 
     for (let i = 0; i < certificadoDB.length; i++) {
         devolucion +=
-            `<div class="entrada resaltar-hover">
+            `<div class="entrada resaltar-hover" id="${ certificadoDB[i]._id }">
                 <div class="imagen-entrada">
                     <img src="${ certificadoDB[i].img}" alt="">
                 </div>

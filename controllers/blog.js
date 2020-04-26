@@ -7,7 +7,7 @@ const Blog = require('../models/blog');
 const Cat = require('../models/categoria');
 
 app.get('/blog', (req, res) => {
-    console.log(__dirname);
+
     Blog.find()
         .populate('categoria', 'descripcion')
         .exec((err, blogDB) => {
