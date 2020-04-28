@@ -753,6 +753,9 @@
      .ancho-maximo {
          width: 100%;
      }
+     .ancho-maximo {
+         max-height: 500px;
+     }
      .imagen-about.centro {
          align-items: center;
          justify-content: center;
