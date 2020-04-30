@@ -16,7 +16,9 @@ const blogSchema = new Schema({
         required: [true, "Es necesaria la imagen del Blog"]
     },
     fechaCreacion: {
-        type: String
+        type: Date,
+        required: [true, "Es necesaria la fecha del Blog"]
+
     },
     categoria: {
         type: Schema.Types.ObjectId,

@@ -10,6 +10,7 @@ app.get('/blog', (req, res) => {
 
     Blog.find()
         .populate('categoria', 'descripcion')
+        .sort('-fechaCreacion')
         .exec((err, blogDB) => {
 
             if (err) {
@@ -29,6 +30,7 @@ app.get('/blog/:id', (req, res) => {
     let id = req.params.id;
     Blog.find({ _id: id })
         .populate('categoria', 'descripcion')
+        .sort('-fechaCreacion')
         .exec((err, articuloDB) => {
 
             if (err) {

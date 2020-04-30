@@ -1,9 +1,12 @@
 const hbs = require('hbs');
+const { obtenerFecha } = require('../../functions/obtenerFecha')
 
 hbs.registerHelper('listarBlogsEnIndex', (blogDB) => {
     let devolucion = "";
+    let fecha = new Date();
 
     for (let i = 0; i < blogDB.length; i++) {
+        fecha = obtenerFecha(blogDB[i].fechaCreacion)
         devolucion += `
         <article class="entrada">
             <div class="imagen-entrada blog">
@@ -12,7 +15,7 @@ hbs.registerHelper('listarBlogsEnIndex', (blogDB) => {
             <div class="contenido">
                 <h3 class="subtitulos">${ blogDB[i].titulo }</h3>
                 <p class= "categoria">${ blogDB[i].categoria.descripcion } </p>
-                <i class="fecha">${ blogDB[i].fechaCreacion } </i>
+                <i class="fecha">${ fecha } </i>
                 <p class="texto-limitado">${ blogDB[i].contenido }</p>
                 <a href="/blog/${ blogDB[i]._id }">Leer más...</a>
             </div>

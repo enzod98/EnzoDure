@@ -1,13 +1,13 @@
 const hbs = require('hbs');
-
+const { obtenerFecha } = require('../../functions/obtenerFecha');
 //Aquí van los helpers
 
 
 //Este helper nos va ayudar a listar todos los blogs de nuestra BD
 hbs.registerHelper('listarBlogs', (blogDB) => {
     let devolucion = "";
-
     for (let i = 0; i < blogDB.length; i++) {
+        var fecha = obtenerFecha(blogDB[i].fechaCreacion);
         devolucion += `
         <article class="entrada">
             <div class="imagen-entrada blog">
@@ -16,7 +16,7 @@ hbs.registerHelper('listarBlogs', (blogDB) => {
             <div class="contenido">
                 <h3 class="subtitulos">${ blogDB[i].titulo }</h3>
                 <p class= "categoria">${ blogDB[i].categoria.descripcion } </p>
-                <i>${ blogDB[i].fechaCreacion } </i>
+                <i>${ fecha } </i>
                 <p class="texto-limitado">${ blogDB[i].contenido } </p>
                 <a href="/blog/${ blogDB[i]._id }">Leer más...</a>
             </div>
@@ -29,13 +29,13 @@ hbs.registerHelper('listarBlogs', (blogDB) => {
 //Este helper nos va ayudar a listar un artículo por ID
 
 hbs.registerHelper('listarArticulo', (articuloDB) => {
-    console.log(articuloDB);
+    fecha = obtenerFecha(articuloDB.fechaCreacion);
     let devolucion = ""
     devolucion += `
         <div class="cabecera-blog-unico">
             <h2 class="subtitulos">${ articuloDB.titulo }</h3>
             <p class="categoria">${ articuloDB.categoria.descripcion }</p>
-            <i>${ articuloDB.fechaCreacion } </i>
+            <i>${ fecha } </i>
         </div>
         <div class="contenido">
             <div class="imagen-entrada float-left">

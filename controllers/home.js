@@ -10,6 +10,7 @@ app.get('/', (req, res) => {
     Blog.find()
         .populate('categoria', 'descripcion')
         .limit(4)
+        .sort('-fechaCreacion')
         .exec((err, blogDB) => {
 
             if (err) {
@@ -31,6 +32,7 @@ app.get('/', (req, res) => {
 
                             Certificado.find()
                                 .limit(5)
+                                .sort('-fecha')
                                 .exec((err, certificadoDB) => {
                                     if (err) {
                                         return res.status(500).json({

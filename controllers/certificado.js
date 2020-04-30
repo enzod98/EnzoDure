@@ -7,6 +7,7 @@ app.get('/certificados', (req, res) => {
 
 
     Certificado.find()
+        .sort('-fecha')
         .exec((err, certificadoDB) => {
             if (err) {
                 return res.status(500).json({
