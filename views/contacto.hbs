@@ -6,28 +6,28 @@
 <main class="contenedor contenedor-pagina-sec">
     <h1 class="subtitulos">Contacto</h1>
     <div class="tarjeta">
-        <form action="#">
+        <form action="/enviar-correo-contacto" method="POST" enctype="application/x-www-form-urlencoded">
             <h2 class="subtitulos">Puedes contactarme rellenando todos los campos.</h2>
             <div class="contenedor-campos">
 
                 <div class="campo">
                     <label>Nombre: </label>
-                    <input autocomplete="off" type="text" name="nombre" placeholder="Su nombre.">
+                    <input autocomplete="off" type="text" name="nombre" placeholder="Su nombre." required oninvalid="setCustomValidity('Debe poner un nombre de referencia')" oninput="setCustomValidity('')">
                 </div>
 
                 <div class="campo">
                     <label>Teléfono: </label>
-                    <input autocomplete="off" type="tel" name="nombre" placeholder="Su teléfono.">
+                    <input autocomplete="off" type="tel" name="telefono" placeholder="Su teléfono.">
                 </div>
 
                 <div class="campo">
                     <label>Correo electrónico: </label>
-                    <input type="mail" name="nombre" placeholder="Su correo.">
+                    <input type="email" name="email" placeholder="Su correo." required oninvalid="setCustomValidity('Debe ingresar un email valido')" oninput="setCustomValidity('')">
                 </div>
 
                 <div class="campo mensaje">
                     <label>Mensaje:</label>
-                    <textarea placeholder="Su mensaje."></textarea>
+                    <textarea placeholder="Su mensaje." name="mensaje" required oninvalid="setCustomValidity('Debe escribir algún mensaje')" oninput="setCustomValidity('')"></textarea>
                 </div>
 
             </div><!-- .contenido-campos -->

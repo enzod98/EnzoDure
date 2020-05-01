@@ -1,777 +1,777 @@
-        :root {
-           --colorAzulTarjetas: #002C78;
-       }
-       /* Importando fuente Baron Neue para la presentación */
-       
-       @font-face {
-           font-family: 'Baron Neue';
-           src: url("../fonts/Baron Neue.otf");
-       }
-       
-       html {
-           font-size: 62.5%;
-           /* Reset para usar la medida REM en vez de PX
+           :root {
+              --colorAzulTarjetas: #002C78;
+          }
+          /* Importando fuente Baron Neue para la presentación */
+          
+          @font-face {
+              font-family: 'Baron Neue';
+              src: url("../fonts/Baron Neue.otf");
+          }
+          
+          html {
+              font-size: 62.5%;
+              /* Reset para usar la medida REM en vez de PX
 Convierte 16px a 10px normales
 1 rem = 1 px*/
-           /*Los rem reemplazan a los pixeles debido a que se adaptan mejor a una pantalla con mucha densidad de pixeles
+              /*Los rem reemplazan a los pixeles debido a que se adaptan mejor a una pantalla con mucha densidad de pixeles
 la vista tal cual se ve en un ordenador común se verá en un teléfono de alta resolución*/
-           font-family: 'Open Sans', sans-serif;
-           color: white;
-           box-sizing: border-box;
-           min-height: 100vh;
-       }
-       
-       *,
-       *:before,
-       *:after {
-           box-sizing: inherit;
-       }
-       
-       body {
-           min-height: 100vh;
-           /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,207cca+100,2989d8+100,007fe0+100 */
-           background: #000000;
-           /* Old browsers */
-           background: -moz-linear-gradient(top, #000000 0%, #207cca 100%, #2989d8 100%, #007fe0 100%);
-           /* FF3.6-15 */
-           background: -webkit-linear-gradient(top, #000000 0%, #207cca 100%, #2989d8 100%, #007fe0 100%);
-           /* Chrome10-25,Safari5.1-6 */
-           background: linear-gradient(to bottom, #000000 0%, #207cca 100%, #2989d8 100%, #007fe0 100%);
-           /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-           filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#007fe0', GradientType=0);
-           /* IE6-9 */
-           background-attachment: fixed;
-           transition: margin-top ease-in-out .2s;
-       }
-       /* Estilos globales */
-       
-       img {
-           max-width: 100%;
-       }
-       
-       h1 {
-           font-size: 3.8rem;
-       }
-       
-       h2 {
-           font-size: 3.4rem;
-       }
-       
-       h3 {
-           font-size: 3rem;
-       }
-       
-       h4 {
-           font-size: 2.6rem;
-       }
-       
-       font-lato {
-           font-family: 'Lato', sans-serif;
-       }
-       
-       a {
-           text-decoration: none;
-           color: white;
-           width: auto;
-           touch-action: unset;
-       }
-       
-       a:hover {
-           cursor: pointer;
-       }
-       /* Reutilizables */
-       
-       .contenedor {
-           padding: 0 10px 0 10px;
-           left: 0;
-           width: 100%;
-           max-width: 1200px;
-           margin: 0 auto;
-       }
-       
-       .centro {
-           text-align: center!important;
-       }
-       
-       @media only screen and (min-width: 768px) {
-           .contenedor {
-               padding: 0;
-           }
-       }
-       
-       .oculto {
-           display: none!important;
-       }
-       
-       .subtitulos {
-           font-family: 'Lato', sans-serif;
-           font-weight: 300;
-       }
-       
-       h1.subtitulos {
-           text-align: center;
-           text-transform: uppercase;
-       }
-       
-       .boton {
-           background-color: transparent;
-           padding: 1rem;
-           display: inline-block;
-           margin: 2rem 0 0 0;
-           color: white;
-           text-transform: uppercase;
-           font-weight: 700;
-           font-size: 2rem;
-           border-radius: 1rem;
-           border: .5px solid white;
-           width: 100%;
-           transition: all .2s ease-in-out;
-       }
-       
-       .boton:hover {
-           background-color: white;
-           color: var(--colorAzulTarjetas);
-       }
-       
-       @media only screen and (min-width: 768px) {
-           .resaltar-hover {
-               transition: all .2s ease-in-out;
-           }
-           .resaltar-hover:hover {
-               transform: scale(1.05);
-               box-shadow: 0px 0px 50px white;
-           }
-       }
-       
-       .texto-limitado {
-           width: 100%;
-           height: 8vh;
-           overflow: hidden;
-           text-overflow: ellipsis;
-           font-size: 1.3rem;
-           text-align: justify;
-       }
-       
-       .texto {
-           font-size: 1.6rem;
-           font-weight: 200;
-           text-align: justify;
-       }
-       
-       .clearfix,
-        ::after {
-           display: block;
-           content: "";
-           clear: both;
-       }
-       
-       @media only screen and (min-width: 768px) {
-           .float-left {
-               float: left;
-               margin: 0 2rem 1rem 0;
-               max-width: 720px;
-           }
-           .float-right {
-               float: right;
-           }
-       }
-       /* Cortina de presentación */
-       
-       .firma {
-           font-family: 'Dancing Script', cursive;
-           margin: 0;
-           color: white;
-           font-size: 7rem;
-           font-weight: 700;
-       }
-       
-       .firma.firma-header {
-           text-align: center;
-           font-size: 6rem;
-       }
-       
-       @media only screen and (min-width: 768px) {
-           .firma.firma-header {
-               font-size: 7rem;
-           }
-       }
-       
-       img.logo-adobe {
-           height: 3rem;
-           width: 3rem;
-           margin-left: 1rem;
-       }
-       
-       .avances {
-           display: flex;
-       }
-       /* Estilos para el header */
-       /* Este estilo se aplicará sólo cuando se haga un scroll mayor a 100vh en móviles, y mayor a 400px en escritorio activando la barra superior fija */
-       
-       header.barra-header {
-           display: flex;
-           justify-content: space-between;
-           align-items: center;
-           position: fixed;
-           top: 0;
-           left: 0;
-           padding: 0 10px;
-           width: 100%;
-           z-index: 2;
-           /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,207cca+100,2989d8+100,007fe0+100 */
-           background: #000000;
-           /* Old browsers */
-           background: -moz-linear-gradient(top, #000000 0%, #207cca 100%, #2989d8 100%, #007fe0 100%);
-           /* FF3.6-15 */
-           background: -webkit-linear-gradient(top, #000000 0%, #207cca 100%, #2989d8 100%, #007fe0 100%);
-           /* Chrome10-25,Safari5.1-6 */
-           background: linear-gradient(to bottom, #000000 0%, #207cca 100%, #2989d8 100%, #007fe0 100%);
-           /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-           filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#007fe0', GradientType=0);
-           /* IE6-9 */
-           background-attachment: fixed;
-           padding-bottom: .5rem;
-       }
-       
-       @media only screen and (min-width: 768px) {
-           header.barra-header {
-               padding-bottom: 1rem;
-               left: unset;
-           }
-       }
-       /* añade un color de fondo a la barra que agarre todo el ancho del body y no sòlo del contenedor */
-       
-       .menu-movil {
-           text-decoration: none;
-           color: white;
-           font-size: 5.5rem;
-           flex: 1;
-           display: flex;
-           justify-content: flex-end;
-       }
-       /* Este estilo se aplica sólo cuando en desktop se haga un scroll de 400px, quitando añadiendo márgen entre los enlaces del nav */
-       
-       .separador-inactivo a {
-           margin-top: 0;
-           margin-left: 30px;
-       }
-       /* Navegación */
-       
-       nav.navegacion {
-           display: block;
-       }
-       
-       @media only screen and (min-width: 768px) {
-           nav.navegacion {
-               display: flex;
-               justify-content: space-between;
-           }
-       }
-       
-       .separador {
-           display: flex;
-           flex-direction: row;
-           justify-content: space-around;
-       }
-       
-       .separador.header {
-           margin-top: 2rem;
-           text-align: center;
-           width: 100%;
-       }
-       /* Bandera */
-       
-       @media only screen and (min-width: 768px) {
-           .separador {
-               justify-content: space-around;
-               width: 100%;
-               flex: 1;
-           }
-           .separador.header:last-of-type {
-               margin-left: 0;
-           }
-           .separador a {
-               flex: 1;
-               width: 100%;
-               white-space: nowrap;
-           }
-       }
-       /* Volver a descomentar cuando se arregle el header scrolleado */
-       
-       nav a {
-           color: white;
-           font-size: 1.8rem;
-       }
-       /* Presentación en Parallax */
-       
-       .parallax {
-           height: 100vh;
-           background-image: url("../img/fondo.jpeg");
-           background-position: center center;
-           background-size: cover;
-           background-attachment: fixed;
-           margin-bottom: 20px;
-       }
-       
-       @media only screen and (min-width: 768px) {
-           .parallax {
-               height: 400px;
-           }
-       }
-       
-       .contenedor-presentacion {
-           height: 100%;
-       }
-       
-       .presentacion {
-           height: 70%;
-           display: flex;
-           align-items: center;
-       }
-       
-       .presentacion p {
-           text-align: center;
-           vertical-align: middle;
-           font-family: 'Baron Neue';
-           font-size: 3.2rem;
-           margin: 15vh 0 0 0;
-           -webkit-text-stroke: 1.5px black;
-       }
-       
-       @media only screen and (min-width: 768px) {
-           .presentacion p {
-               font-size: 4rem;
-               margin-top: 4rem;
-           }
-       }
-       
-       .site-header {
-           background: rgb(0, 0, 0);
-           background: radial-gradient(circle, rgba(0, 0, 0, 0.5466561624649859) 0%, rgba(0, 0, 0, 0.8) 48%, rgba(0, 0, 0, 0.8) 100%);
-           height: 100%;
-       }
-       
-       @media only screen and (min-width: 768px) {
-           .site-header .contenedor {
-               height: unset;
-           }
-       }
-       /* Grillas */
-       
-       @media only screen and (min-width: 768px) {
-           .grilla-columna-2fr-1fr {
-               display: grid;
-               grid-template-columns: 2fr 1fr;
-               column-gap: 2rem;
-               margin-bottom: 2rem;
-           }
-           .fila-2fr-1fr {
-               grid-template-rows: repeat(5, 1fr);
-               row-gap: 2rem;
-               margin-bottom: 2rem;
-           }
-           .grilla-3-3 {
-               display: grid;
-               grid-template-columns: repeat(3, 1fr);
-               gap: 3rem;
-           }
-       }
-       /* Estilos para las tarjetas */
-       
-       .tarjeta {
-           margin-bottom: 20px;
-           padding: 40px 20px;
-           background-color: var(--colorAzulTarjetas);
-           width: 100%;
-           border-radius: 20px;
-       }
-       
-       @media only screen and (min-width: 768px) {
-           .tarjeta {
-               margin: 0;
-               padding: 40px 30px;
-           }
-           .tarjeta.grilla-3-3 {
-               padding: 5rem;
-           }
-       }
-       
-       .tarjeta h2 {
-           margin: 0 0 20px 0;
-       }
-       
-       h3.subtitulos {
-           margin: .5rem 0;
-       }
-       /* Estilos para el blog */
-       
-       @media only screen and (min-width: 768px) {
-           .tarjeta.blog {
-               grid-row: 1 / 6;
-               grid-column: 1 / 2;
-               padding: 40px 60px;
-           }
-       }
-       
-       .imagen-entrada {
-           overflow: hidden;
-           display: flex;
-           align-items: center;
-           max-height: 200px;
-       }
-       
-       @media only screen and (min-width: 768px) {
-           .imagen-entrada {
-               max-height: 350px;
-               min-height: 0;
-           }
-           .imagen-entrada.fotos {
-               max-height: 250px;
-               min-height: 0;
-           }
-       }
-       
-       .imagen-entrada img {
-           min-width: 100%;
-       }
-       
-       .entrada::after {
-           content: '';
-           margin: 3rem auto;
-           width: 25rem;
-           border: 1px solid #e1e1e1;
-           display: block;
-       }
-       
-       .tarjeta.blog .entrada:last-of-type::after {
-           display: none;
-       }
-       
-       .contenido a {
-           display: block;
-           text-align: right;
-           color: white;
-           font-weight: 700;
-       }
-       /* Estilos para la tarjeta Proyectos */
-       
-       @media only screen and (min-width: 768px) {
-           .tarjeta.proyectos {
-               grid-row: 1 / 3;
-           }
-       }
-       
-       .proyectos .entrada h3 {
-           text-align: center;
-           text-transform: uppercase;
-       }
-       /* Estilos para la tarjeta certificaciones */
-       
-       @media only screen and (min-width: 768px) {
-           .tarjeta.certificados {
-               grid-row: 3 / 4;
-           }
-       }
-       
-       .lista-certificados li a h4 {
-           margin: 0 0 10px 0;
-       }
-       /* Estilo para la tarjeta fotos */
-       /* Estilos para la tarjeta certificaciones */
-       
-       @media only screen and (min-width: 768px) {
-           .tarjeta.fotos {
-               grid-row: 4 / 6;
-           }
-       }
-       
-       .contenido.fotos p {
-           text-align: center;
-           font-style: italic;
-       }
-       
-       .img-borde {
-           border: 10px solid blue;
-       }
-       /* La idea es que el footer sólo sea un footer como tal en la versión desktop, en móvil tendremos la información del footer en el sidebar, por eso esta parte es desktop first */
-       /* Footer */
-       
-       .site-footer {
-           display: block;
-           background-color: var(--colorAzulTarjetas);
-           max-height: 150px;
-       }
-       
-       @media only screen and (max-width: 768px) {
-           .site-footer {
-               max-height: unset;
-               width: 75vw;
-               /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,207cca+100,2989d8+100,007fe0+100 */
-               background: #000000;
-               /* Old browsers */
-               background: -moz-linear-gradient(top, #000000 0%, #207cca 100%, #2989d8 100%, #007fe0 100%);
-               /* FF3.6-15 */
-               background: -webkit-linear-gradient(top, #000000 0%, #207cca 100%, #2989d8 100%, #007fe0 100%);
-               /* Chrome10-25,Safari5.1-6 */
-               background: linear-gradient(to bottom, #000000 0%, #207cca 100%, #2989d8 100%, #007fe0 100%);
-               /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-               filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#007fe0', GradientType=0);
-               /* IE6-9 */
-               background-attachment: fixed;
-           }
-       }
-       
-       .site-footer .contenedor {
-           display: flex;
-           flex-direction: row;
-           justify-content: space-around;
-           align-items: center;
-           padding: 0;
-           height: 100%;
-       }
-       
-       @media only screen and (max-width: 768px) {
-           .site-footer .contenedor {
-               flex-direction: column;
-               justify-content: space-between;
-               align-items: center;
-               padding-left: 1rem;
-               width: 100%;
-               margin: 0 auto 0 0;
-           }
-       }
-       /* Nuestra firma en el footer */
-       
-       .firma-footer {
-           display: flex;
-           flex-direction: column;
-           text-align: center;
-           width: calc(33.3% - 10px);
-       }
-       
-       @media only screen and (max-width: 768px) {
-           .firma-footer {
-               order: 1;
-               width: 100%;
-           }
-           .firma-footer h2.firma {
-               font-size: 4rem;
-           }
-       }
-       
-       .navegacion-footer {
-           display: flex;
-           flex-direction: row;
-           margin-right: 5rem;
-       }
-       
-       @media only screen and (max-width: 768px) {
-           .navegacion-footer {
-               margin-top: 5rem;
-               flex-direction: column;
-               align-items: center;
-               width: 100%;
-               margin-right: unset;
-           }
-       }
-       
-       .navegacion-footer .separador {
-           flex-direction: column;
-           justify-content: space-between;
-           height: 100%;
-           width: calc(33.3% - 10px);
-       }
-       
-       @media only screen and (max-width: 768px) {
-           .navegacion-footer .separador {
-               margin-top: 0;
-               width: 100%;
-           }
-           .navegacion-footer .separador:last-of-type {
-               margin: unset;
-           }
-       }
-       
-       .navegacion-footer .separador a {
-           margin-top: 1rem;
-           width: 100%;
-           text-align: left;
-       }
-       
-       @media only screen and (min-width: 768px) {
-           .navegacion-footer .separador a {
-               margin-top: 1rem auto 0 auto;
-               width: unset;
-           }
-       }
-       
-       .navegacion-footer .separador a:first-of-type {
-           margin-top: 0;
-       }
-       
-       @media only screen and (max-width: 768px) {
-           .navegacion-footer .separador a {
-               margin-top: 3rem!important;
-               width: 10rem!important;
-           }
-       }
-       
-       nav.mis-redes {
-           display: grid;
-           grid-template-columns: repeat(6, 1fr);
-           column-gap: 40px;
-           width: calc(33.3% - 10px);
-       }
-       
-       @media only screen and (max-width: 768px) {
-           nav.mis-redes {
-               grid-template-columns: repeat(3, 1fr);
-               column-gap: 0px;
-               text-align: center;
-               row-gap: 20px;
-               width: 80%;
-           }
-       }
-       /* Estilos para la páginas secundarias */
-       
-       .contenedor-pagina-sec {
-           margin: 2rem auto;
-       }
-       /* Estilos para el formulario */
-       
-       form {
-           display: block;
-       }
-       
-       @media only screen and (max-width: 768px) {
-           form h2.subtitulos {
-               font-size: 2.5rem;
-               text-align: center;
-           }
-       }
-       
-       @media only screen and (min-width: 768px) {
-           .contenedor-campos {
-               display: grid;
-               grid-template-columns: repeat(3, 1fr);
-               gap: 2rem;
-           }
-       }
-       
-       .campo {
-           width: 100%;
-           display: flex;
-           flex-direction: column;
-           font-size: 2rem;
-       }
-       
-       .campo:focus-within input,
-       .campo:focus-within textarea,
-       form .enviar:focus-within input {
-           transition: all .1s ease-in-out;
-           outline: none;
-           border: none;
-           transform: scale(1.01);
-           box-shadow: 0px 0px 20px white;
-       }
-       
-       form .enviar input {
-           border: 1px solid white;
-       }
-       
-       label {
-           margin-bottom: .5rem;
-       }
-       
-       input {
-           margin-bottom: 2rem;
-       }
-       
-       textarea {
-           height: 200px;
-           width: 100%;
-       }
-       
-       @media only screen and (min-width: 768px) {
-           .campo.mensaje {
-               grid-column: 1/4;
-           }
-       }
-       /* Estilos para la página de certificados */
-       
-       #contenedor-certificados a {
-           margin-top: 2rem;
-       }
-       
-       @media only screen and (min-width: 768px) {
-           .boton.cursos {
-               width: 80%;
-               margin: 0 auto;
-           }
-       }
-       /* Estilos para la página de Blog */
-       
-       .cabecera-blog-unico {
-           margin-bottom: 1.5rem;
-       }
-       
-       .cabecera-blog-unico h2 {
-           margin-bottom: .5rem;
-           font-size: 4rem;
-       }
-       
-       p.categoria {
-           margin: 0 0 .5rem 0;
-           font-size: 1.6rem;
-       }
-       
-       .fecha {
-           font-size: 1.3rem;
-       }
-       
-       @media only screen and (min-width: 768px) {
-           .articulo-completo {
-               font-size: 1.6rem;
-               line-height: 2.5rem
-           }
-       }
-       /* Página Proyectos */
-       
-       .proyectos.entrada::after {
-           content: '';
-           margin: 3rem auto;
-           width: 100%;
-           border: 1px solid #e1e1e1;
-           display: block;
-       }
-       /* Pçagina sobre mí */
-       
-       @media only screen and (min-width: 768px) {
-           .imagen-about {
-               overflow: hidden;
-               display: flex;
-               align-items: flex-start;
-               width: 250px;
-               max-height: 300px;
-               margin: 0;
-           }
-           .ancho-maximo {
-               width: 100%;
-           }
-           .ancho-maximo {
-               max-height: 500px;
-           }
-           .imagen-about.centro {
-               align-items: center;
-               justify-content: center;
-               height: 100%;
-           }
-           .texto.ajustar-ancho {
-               max-width: unset;
-               width: calc(100% - 300px);
-           }
-           .margin-top {
-               margin-top: 16px;
-               margin-right: 0;
-           }
-       }
+              font-family: 'Open Sans', sans-serif;
+              color: white;
+              box-sizing: border-box;
+              min-height: 100vh;
+          }
+          
+          *,
+          *:before,
+          *:after {
+              box-sizing: inherit;
+          }
+          
+          body {
+              min-height: 100vh;
+              /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,207cca+100,2989d8+100,007fe0+100 */
+              background: #000000;
+              /* Old browsers */
+              background: -moz-linear-gradient(top, #000000 0%, #207cca 100%, #2989d8 100%, #007fe0 100%);
+              /* FF3.6-15 */
+              background: -webkit-linear-gradient(top, #000000 0%, #207cca 100%, #2989d8 100%, #007fe0 100%);
+              /* Chrome10-25,Safari5.1-6 */
+              background: linear-gradient(to bottom, #000000 0%, #207cca 100%, #2989d8 100%, #007fe0 100%);
+              /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+              filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#007fe0', GradientType=0);
+              /* IE6-9 */
+              background-attachment: fixed;
+              transition: margin-top ease-in-out .2s;
+          }
+          /* Estilos globales */
+          
+          img {
+              max-width: 100%;
+          }
+          
+          h1 {
+              font-size: 3.8rem;
+          }
+          
+          h2 {
+              font-size: 3.4rem;
+          }
+          
+          h3 {
+              font-size: 3rem;
+          }
+          
+          h4 {
+              font-size: 2.6rem;
+          }
+          
+          font-lato {
+              font-family: 'Lato', sans-serif;
+          }
+          
+          a {
+              text-decoration: none;
+              color: white;
+              width: auto;
+              touch-action: unset;
+          }
+          
+          a:hover {
+              cursor: pointer;
+          }
+          /* Reutilizables */
+          
+          .contenedor {
+              padding: 0 10px 0 10px;
+              left: 0;
+              width: 100%;
+              max-width: 1200px;
+              margin: 0 auto;
+          }
+          
+          .centro {
+              text-align: center!important;
+          }
+          
+          @media only screen and (min-width: 768px) {
+              .contenedor {
+                  padding: 0;
+              }
+          }
+          
+          .oculto {
+              display: none!important;
+          }
+          
+          .subtitulos {
+              font-family: 'Lato', sans-serif;
+              font-weight: 300;
+          }
+          
+          h1.subtitulos {
+              text-align: center;
+              text-transform: uppercase;
+          }
+          
+          .boton {
+              background-color: transparent;
+              padding: 1rem;
+              display: inline-block;
+              margin: 2rem 0 0 0;
+              color: white;
+              text-transform: uppercase;
+              font-weight: 700;
+              font-size: 2rem;
+              border-radius: 1rem;
+              border: .09rem solid white;
+              width: 100%;
+              transition: all .2s ease-in-out;
+          }
+          
+          .boton:hover {
+              background-color: white;
+              color: var(--colorAzulTarjetas);
+          }
+          
+          @media only screen and (min-width: 768px) {
+              .resaltar-hover {
+                  transition: all .2s ease-in-out;
+              }
+              .resaltar-hover:hover {
+                  transform: scale(1.05);
+                  box-shadow: 0px 0px 50px white;
+              }
+          }
+          
+          .texto-limitado {
+              width: 100%;
+              height: 8vh;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              font-size: 1.3rem;
+              text-align: justify;
+          }
+          
+          .texto {
+              font-size: 1.6rem;
+              font-weight: 200;
+              text-align: justify;
+          }
+          
+          .clearfix,
+           ::after {
+              display: block;
+              content: "";
+              clear: both;
+          }
+          
+          @media only screen and (min-width: 768px) {
+              .float-left {
+                  float: left;
+                  margin: 0 2rem 1rem 0;
+                  max-width: 720px;
+              }
+              .float-right {
+                  float: right;
+              }
+          }
+          /* Cortina de presentación */
+          
+          .firma {
+              font-family: 'Dancing Script', cursive;
+              margin: 0;
+              color: white;
+              font-size: 7rem;
+              font-weight: 700;
+          }
+          
+          .firma.firma-header {
+              text-align: center;
+              font-size: 6rem;
+          }
+          
+          @media only screen and (min-width: 768px) {
+              .firma.firma-header {
+                  font-size: 7rem;
+              }
+          }
+          
+          img.logo-adobe {
+              height: 3rem;
+              width: 3rem;
+              margin-left: 1rem;
+          }
+          
+          .avances {
+              display: flex;
+          }
+          /* Estilos para el header */
+          /* Este estilo se aplicará sólo cuando se haga un scroll mayor a 100vh en móviles, y mayor a 400px en escritorio activando la barra superior fija */
+          
+          header.barra-header {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              position: fixed;
+              top: 0;
+              left: 0;
+              padding: 0 10px;
+              width: 100%;
+              z-index: 2;
+              /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,207cca+100,2989d8+100,007fe0+100 */
+              background: #000000;
+              /* Old browsers */
+              background: -moz-linear-gradient(top, #000000 0%, #207cca 100%, #2989d8 100%, #007fe0 100%);
+              /* FF3.6-15 */
+              background: -webkit-linear-gradient(top, #000000 0%, #207cca 100%, #2989d8 100%, #007fe0 100%);
+              /* Chrome10-25,Safari5.1-6 */
+              background: linear-gradient(to bottom, #000000 0%, #207cca 100%, #2989d8 100%, #007fe0 100%);
+              /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+              filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#007fe0', GradientType=0);
+              /* IE6-9 */
+              background-attachment: fixed;
+              padding-bottom: .5rem;
+          }
+          
+          @media only screen and (min-width: 768px) {
+              header.barra-header {
+                  padding-bottom: 1rem;
+                  left: unset;
+              }
+          }
+          /* añade un color de fondo a la barra que agarre todo el ancho del body y no sòlo del contenedor */
+          
+          .menu-movil {
+              text-decoration: none;
+              color: white;
+              font-size: 5.5rem;
+              flex: 1;
+              display: flex;
+              justify-content: flex-end;
+          }
+          /* Este estilo se aplica sólo cuando en desktop se haga un scroll de 400px, quitando añadiendo márgen entre los enlaces del nav */
+          
+          .separador-inactivo a {
+              margin-top: 0;
+              margin-left: 30px;
+          }
+          /* Navegación */
+          
+          nav.navegacion {
+              display: block;
+          }
+          
+          @media only screen and (min-width: 768px) {
+              nav.navegacion {
+                  display: flex;
+                  justify-content: space-between;
+              }
+          }
+          
+          .separador {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+          }
+          
+          .separador.header {
+              margin-top: 2rem;
+              text-align: center;
+              width: 100%;
+          }
+          /* Bandera */
+          
+          @media only screen and (min-width: 768px) {
+              .separador {
+                  justify-content: space-around;
+                  width: 100%;
+                  flex: 1;
+              }
+              .separador.header:last-of-type {
+                  margin-left: 0;
+              }
+              .separador a {
+                  flex: 1;
+                  width: 100%;
+                  white-space: nowrap;
+              }
+          }
+          /* Volver a descomentar cuando se arregle el header scrolleado */
+          
+          nav a {
+              color: white;
+              font-size: 1.8rem;
+          }
+          /* Presentación en Parallax */
+          
+          .parallax {
+              height: 100vh;
+              background-image: url("../img/fondo.jpeg");
+              background-position: center center;
+              background-size: cover;
+              background-attachment: fixed;
+              margin-bottom: 20px;
+          }
+          
+          @media only screen and (min-width: 768px) {
+              .parallax {
+                  height: 400px;
+              }
+          }
+          
+          .contenedor-presentacion {
+              height: 100%;
+          }
+          
+          .presentacion {
+              height: 70%;
+              display: flex;
+              align-items: center;
+          }
+          
+          .presentacion p {
+              text-align: center;
+              vertical-align: middle;
+              font-family: 'Baron Neue';
+              font-size: 3.2rem;
+              margin: 15vh 0 0 0;
+              -webkit-text-stroke: 1.5px black;
+          }
+          
+          @media only screen and (min-width: 768px) {
+              .presentacion p {
+                  font-size: 4rem;
+                  margin-top: 4rem;
+              }
+          }
+          
+          .site-header {
+              background: rgb(0, 0, 0);
+              background: radial-gradient(circle, rgba(0, 0, 0, 0.5466561624649859) 0%, rgba(0, 0, 0, 0.8) 48%, rgba(0, 0, 0, 0.8) 100%);
+              height: 100%;
+          }
+          
+          @media only screen and (min-width: 768px) {
+              .site-header .contenedor {
+                  height: unset;
+              }
+          }
+          /* Grillas */
+          
+          @media only screen and (min-width: 768px) {
+              .grilla-columna-2fr-1fr {
+                  display: grid;
+                  grid-template-columns: 2fr 1fr;
+                  column-gap: 2rem;
+                  margin-bottom: 2rem;
+              }
+              .fila-2fr-1fr {
+                  grid-template-rows: repeat(5, 1fr);
+                  row-gap: 2rem;
+                  margin-bottom: 2rem;
+              }
+              .grilla-3-3 {
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  gap: 3rem;
+              }
+          }
+          /* Estilos para las tarjetas */
+          
+          .tarjeta {
+              margin-bottom: 20px;
+              padding: 40px 20px;
+              background-color: var(--colorAzulTarjetas);
+              width: 100%;
+              border-radius: 20px;
+          }
+          
+          @media only screen and (min-width: 768px) {
+              .tarjeta {
+                  margin: 0;
+                  padding: 40px 30px;
+              }
+              .tarjeta.grilla-3-3 {
+                  padding: 5rem;
+              }
+          }
+          
+          .tarjeta h2 {
+              margin: 0 0 20px 0;
+          }
+          
+          h3.subtitulos {
+              margin: .5rem 0;
+          }
+          /* Estilos para el blog */
+          
+          @media only screen and (min-width: 768px) {
+              .tarjeta.blog {
+                  grid-row: 1 / 6;
+                  grid-column: 1 / 2;
+                  padding: 40px 60px;
+              }
+          }
+          
+          .imagen-entrada {
+              overflow: hidden;
+              display: flex;
+              align-items: center;
+              max-height: 200px;
+          }
+          
+          @media only screen and (min-width: 768px) {
+              .imagen-entrada {
+                  max-height: 350px;
+                  min-height: 0;
+              }
+              .imagen-entrada.fotos {
+                  max-height: 250px;
+                  min-height: 0;
+              }
+          }
+          
+          .imagen-entrada img {
+              min-width: 100%;
+          }
+          
+          .entrada::after {
+              content: '';
+              margin: 3rem auto;
+              width: 25rem;
+              border: 1px solid #e1e1e1;
+              display: block;
+          }
+          
+          .tarjeta.blog .entrada:last-of-type::after {
+              display: none;
+          }
+          
+          .contenido a {
+              display: block;
+              text-align: right;
+              color: white;
+              font-weight: 700;
+          }
+          /* Estilos para la tarjeta Proyectos */
+          
+          @media only screen and (min-width: 768px) {
+              .tarjeta.proyectos {
+                  grid-row: 1 / 3;
+              }
+          }
+          
+          .proyectos .entrada h3 {
+              text-align: center;
+              text-transform: uppercase;
+          }
+          /* Estilos para la tarjeta certificaciones */
+          
+          @media only screen and (min-width: 768px) {
+              .tarjeta.certificados {
+                  grid-row: 3 / 4;
+              }
+          }
+          
+          .lista-certificados li a h4 {
+              margin: 0 0 10px 0;
+          }
+          /* Estilo para la tarjeta fotos */
+          /* Estilos para la tarjeta certificaciones */
+          
+          @media only screen and (min-width: 768px) {
+              .tarjeta.fotos {
+                  grid-row: 4 / 6;
+              }
+          }
+          
+          .contenido.fotos p {
+              text-align: center;
+              font-style: italic;
+          }
+          
+          .img-borde {
+              border: 10px solid blue;
+          }
+          /* La idea es que el footer sólo sea un footer como tal en la versión desktop, en móvil tendremos la información del footer en el sidebar, por eso esta parte es desktop first */
+          /* Footer */
+          
+          .site-footer {
+              display: block;
+              background-color: var(--colorAzulTarjetas);
+              max-height: 150px;
+          }
+          
+          @media only screen and (max-width: 768px) {
+              .site-footer {
+                  max-height: unset;
+                  width: 75vw;
+                  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,207cca+100,2989d8+100,007fe0+100 */
+                  background: #000000;
+                  /* Old browsers */
+                  background: -moz-linear-gradient(top, #000000 0%, #207cca 100%, #2989d8 100%, #007fe0 100%);
+                  /* FF3.6-15 */
+                  background: -webkit-linear-gradient(top, #000000 0%, #207cca 100%, #2989d8 100%, #007fe0 100%);
+                  /* Chrome10-25,Safari5.1-6 */
+                  background: linear-gradient(to bottom, #000000 0%, #207cca 100%, #2989d8 100%, #007fe0 100%);
+                  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#007fe0', GradientType=0);
+                  /* IE6-9 */
+                  background-attachment: fixed;
+              }
+          }
+          
+          .site-footer .contenedor {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+              align-items: center;
+              padding: 0;
+              height: 100%;
+          }
+          
+          @media only screen and (max-width: 768px) {
+              .site-footer .contenedor {
+                  flex-direction: column;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding-left: 1rem;
+                  width: 100%;
+                  margin: 0 auto 0 0;
+              }
+          }
+          /* Nuestra firma en el footer */
+          
+          .firma-footer {
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+              width: calc(33.3% - 10px);
+          }
+          
+          @media only screen and (max-width: 768px) {
+              .firma-footer {
+                  order: 1;
+                  width: 100%;
+              }
+              .firma-footer h2.firma {
+                  font-size: 4rem;
+              }
+          }
+          
+          .navegacion-footer {
+              display: flex;
+              flex-direction: row;
+              margin-right: 5rem;
+          }
+          
+          @media only screen and (max-width: 768px) {
+              .navegacion-footer {
+                  margin-top: 5rem;
+                  flex-direction: column;
+                  align-items: center;
+                  width: 100%;
+                  margin-right: unset;
+              }
+          }
+          
+          .navegacion-footer .separador {
+              flex-direction: column;
+              justify-content: space-between;
+              height: 100%;
+              width: calc(33.3% - 10px);
+          }
+          
+          @media only screen and (max-width: 768px) {
+              .navegacion-footer .separador {
+                  margin-top: 0;
+                  width: 100%;
+              }
+              .navegacion-footer .separador:last-of-type {
+                  margin: unset;
+              }
+          }
+          
+          .navegacion-footer .separador a {
+              margin-top: 1rem;
+              width: 100%;
+              text-align: left;
+          }
+          
+          @media only screen and (min-width: 768px) {
+              .navegacion-footer .separador a {
+                  margin-top: 1rem auto 0 auto;
+                  width: unset;
+              }
+          }
+          
+          .navegacion-footer .separador a:first-of-type {
+              margin-top: 0;
+          }
+          
+          @media only screen and (max-width: 768px) {
+              .navegacion-footer .separador a {
+                  margin-top: 3rem!important;
+                  width: 10rem!important;
+              }
+          }
+          
+          nav.mis-redes {
+              display: grid;
+              grid-template-columns: repeat(6, 1fr);
+              column-gap: 40px;
+              width: calc(33.3% - 10px);
+          }
+          
+          @media only screen and (max-width: 768px) {
+              nav.mis-redes {
+                  grid-template-columns: repeat(3, 1fr);
+                  column-gap: 0px;
+                  text-align: center;
+                  row-gap: 20px;
+                  width: 80%;
+              }
+          }
+          /* Estilos para la páginas secundarias */
+          
+          .contenedor-pagina-sec {
+              margin: 2rem auto;
+          }
+          /* Estilos para el formulario */
+          
+          form {
+              display: block;
+          }
+          
+          @media only screen and (max-width: 768px) {
+              form h2.subtitulos {
+                  font-size: 2.5rem;
+                  text-align: center;
+              }
+          }
+          
+          @media only screen and (min-width: 768px) {
+              .contenedor-campos {
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  gap: 2rem;
+              }
+          }
+          
+          .campo {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              font-size: 2rem;
+          }
+          
+          .campo:focus-within input,
+          .campo:focus-within textarea,
+          form .enviar:focus-within input {
+              transition: all .1s ease-in-out;
+              outline: none;
+              border: white;
+              transform: scale(1.01);
+              box-shadow: 0px 0px 20px white;
+          }
+          
+          form .enviar input {
+              border: 1px solid white;
+          }
+          
+          label {
+              margin-bottom: .5rem;
+          }
+          
+          input {
+              margin-bottom: 2rem;
+          }
+          
+          textarea {
+              height: 200px;
+              width: 100%;
+          }
+          
+          @media only screen and (min-width: 768px) {
+              .campo.mensaje {
+                  grid-column: 1/4;
+              }
+          }
+          /* Estilos para la página de certificados */
+          
+          #contenedor-certificados a {
+              margin-top: 2rem;
+          }
+          
+          @media only screen and (min-width: 768px) {
+              .boton.cursos {
+                  width: 80%;
+                  margin: 0 auto;
+              }
+          }
+          /* Estilos para la página de Blog */
+          
+          .cabecera-blog-unico {
+              margin-bottom: 1.5rem;
+          }
+          
+          .cabecera-blog-unico h2 {
+              margin-bottom: .5rem;
+              font-size: 4rem;
+          }
+          
+          p.categoria {
+              margin: 0 0 .5rem 0;
+              font-size: 1.6rem;
+          }
+          
+          .fecha {
+              font-size: 1.3rem;
+          }
+          
+          @media only screen and (min-width: 768px) {
+              .articulo-completo {
+                  font-size: 1.6rem;
+                  line-height: 2.5rem
+              }
+          }
+          /* Página Proyectos */
+          
+          .proyectos.entrada::after {
+              content: '';
+              margin: 3rem auto;
+              width: 100%;
+              border: 1px solid #e1e1e1;
+              display: block;
+          }
+          /* Pçagina sobre mí */
+          
+          @media only screen and (min-width: 768px) {
+              .imagen-about {
+                  overflow: hidden;
+                  display: flex;
+                  align-items: flex-start;
+                  width: 250px;
+                  max-height: 300px;
+                  margin: 0;
+              }
+              .ancho-maximo {
+                  width: 100%;
+              }
+              .ancho-maximo {
+                  max-height: 500px;
+              }
+              .imagen-about.centro {
+                  align-items: center;
+                  justify-content: center;
+                  height: 100%;
+              }
+              .texto.ajustar-ancho {
+                  max-width: unset;
+                  width: calc(100% - 300px);
+              }
+              .margin-top {
+                  margin-top: 16px;
+                  margin-right: 0;
+              }
+          }
