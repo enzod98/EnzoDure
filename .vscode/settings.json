@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/dbe263a7-1e82-4fec-bcd7-17cbc0c22259/resourceGroups/Enzo-Dure/providers/Microsoft.Web/sites/enzo-dure",
+    "appService.deploySubpath": ""
+}

@@ -2,6 +2,7 @@ require('./config/config');
 //Express - Nuestro motor principal de peticiones
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser')
 
 //Mongoose - Nuestro gestor de BD noSQL
 const mongoose = require('mongoose');
@@ -12,9 +13,12 @@ const path = require('path');
 //Importamos los helpers del HBS
 require('../views/helpers/helpers')
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 //Motor HBS
 //definimos la carpeta estática pública
-app.use(express.static(path.resolve(__dirname, '../public')));
+app.use(express.static(path.resolve(__dirname, '../public/')));
 
 //Con esto le decimos a express que nuestro motor de plantillas HTML será HBS
 

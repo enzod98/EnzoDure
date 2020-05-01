@@ -7,5 +7,6 @@ app.use(require('./proyectos'));
 app.use(require('./galeria'));
 app.use(require('./contacto'));
 app.use(require('./certificado'));
+app.use(require('./about'));
 
 module.exports = app;
