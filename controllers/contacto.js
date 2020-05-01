@@ -17,8 +17,8 @@ app.post('/enviar-correo-contacto', (req, res) => {
                         <p>Mensaje: ${ body.mensaje }</p>`
 
     let mailOptions = {
-        from: 'enzod98@outlook.com',
-        to: 'enzod98@outlook.com',
+        from: process.env.MAILUSER,
+        to: process.env.MAILUSER,
         subject: 'Nuevo mensaje de Contacto',
         html: HTMLMensaje
     };

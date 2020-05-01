@@ -6,6 +6,7 @@ const Proyecto = require('../models/proyecto');
 app.get('/proyectos', (req, res) => {
 
     Proyecto.find()
+        .sort('-_id')
         .exec((err, proyectoDB) => {
             if (err) {
                 return res.status(500).json({

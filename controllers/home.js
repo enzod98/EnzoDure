@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
             } else {
                 Proyecto.find()
                     .limit(2)
+                    .sort('-_id')
                     .exec((err, proyectoDB) => {
 
                         if (err) {
