@@ -15,7 +15,7 @@ hbs.registerHelper('listarProyectos', (proyectoDB) => {
                         <img src="${ proyectoDB[i].img }" alt="">
                     </div>
                     <p class="texto"> ${ proyectoDB[i].descripcion }</p>
-                    <a href="${ proyectoDB[i].url }" class="centro boton">Ver proyecto</a>
+                    <a href="${ proyectoDB[i].url }" target="_blank" class="centro boton">Ver proyecto</a>
                 </div>
             </div>
         </div>`
