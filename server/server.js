@@ -2,9 +2,7 @@ require('./config/config');
 //Express - Nuestro motor principal de peticiones
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
-const fs = require('fs');
-const https = require('https')
+const bodyParser = require('body-parser')
 
 //Mongoose - Nuestro gestor de BD noSQL
 const mongoose = require('mongoose');
@@ -47,16 +45,8 @@ mongoose.connect(process.env.URIDB, { useNewUrlParser: true, useUnifiedTopology:
 })
 
 
-https.createServer({
-    key: fs.readFileSync(path.resolve(__dirname, 'certs/private.key')),
-    cert: fs.readFileSync(path.resolve(__dirname, 'certs/certificate.crt'))
-}, app).listen(process.env.PORT, function() {
-    console.log("My https server listening on port " + process.env.PORT + "...");
-});
-
-
-/* app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT, () => {
     console.log('Escuchando peticiones en el puerto ', process.env.PORT);
-}); */
+});
 
 module.exports = app;
