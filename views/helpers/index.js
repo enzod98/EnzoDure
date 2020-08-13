@@ -61,6 +61,26 @@ hbs.registerHelper('listarCertificadosEnIndex', (certificadoDB) => {
     return new hbs.SafeString(devolucion);
 });
 
+hbs.registerHelper('listarFotosEnIndex', (fotosDB) => {
+    let devolucion = "";
+
+    for (let i = 0; i < fotosDB.length; i++) {
+        devolucion += 
+        `<div class="entrada">
+            <div class="imagen-entrada img-borde">
+                <img src="${ fotosDB[i].img }" alt="">
+            </div>
+            <div class="contenido fotos">
+                <p>${fotosDB[i].descripcion}
+                </p>
+                <a href="${ fotosDB[i].urlInstagram }" target="_blank" class="centro boton cursos">Ver publicación</a>
+            </div>
+        </div>`
+    }
+
+    return new hbs.SafeString(devolucion);
+});
+
 module.exports = {
     hbs
 }
