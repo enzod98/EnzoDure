@@ -1,8 +1,8 @@
 const Foto = require('../models/foto');
-const respuesta= require('../response.json')
+/* const respuesta= require('../response.json')
 let posts= respuesta.last_post;
-guardarFotos(posts);
-/* const axios = require("axios");
+guardarFotos(posts); */
+const axios = require("axios");
 
 axios({
     "method":"GET",
@@ -20,7 +20,7 @@ axios({
     .then((response)=>{
        // console.log(response);
         let posts = response.data.last_post;
-        console.log(posts);
+        //console.log(posts);
       guardarFotos(posts);
     })
     .catch((error)=>{
@@ -29,7 +29,6 @@ axios({
 
     module.exports = axios;
     
-     */
     
 //console.log(respuesta.last_post);
 
