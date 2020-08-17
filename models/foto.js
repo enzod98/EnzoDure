@@ -8,11 +8,14 @@ const fotoSchema = new Schema({
         required: [true, 'Es necesaria la descripción de la imagen']
     },
     img: {
-        type: String
+        type: String,
+        required: [true, 'Es necesaria la url de la imagen']
     },
     urlInstagram: {
-        type: String
+        type: String,
+        required: [true, 'Es necesaria la url del post'],
+        unique: true
     }
 });
 
-module.exports = mongoose.model('Foto', certificadoSchema);
+module.exports = mongoose.model('Foto', fotoSchema);

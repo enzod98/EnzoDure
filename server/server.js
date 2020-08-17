@@ -1,4 +1,4 @@
-require('./config/config');
+require('dotenv').config()
 //Express - Nuestro motor principal de peticiones
 const express = require('express');
 const app = express();
@@ -12,7 +12,7 @@ const hbs = require('hbs');
 const path = require('path');
 //Importamos los helpers del HBS
 require('../views/helpers/helpers')
-
+require('dotenv').config()
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 

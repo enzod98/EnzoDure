@@ -4,6 +4,7 @@ const Blog = require('../models/blog');
 const Cat = require('../models/categoria');
 const Proyecto = require('../models/proyecto');
 const Certificado = require('../models/certificado');
+const Fotos = require('../models/foto');
 
 app.get('/', (req, res) => {
 
@@ -41,14 +42,26 @@ app.get('/', (req, res) => {
                                             err
                                         })
                                     }
+                                    Fotos.find()
+                                        .limit(2)
+                                        .sort('-_id')
+                                        .exec((err, fotosDB) => {
+                                            if (err) {
+                                                return res.status(500).json({
+                                                    ok: false,
+                                                    err
+                                                })
+                                            }
+                                            res.render('index', {
+                                                //el siguiente atributo le añadira la clase index al header para aplicar estilos que sólo quiero acá 
+                                                claseIndex: 'index',
+                                                blogDB,
+                                                proyectoDB,
+                                                certificadoDB,
+                                                fotosDB
+                                            });
 
-                                    res.render('index', {
-                                        //el siguiente atributo le añadira la clase index al header para aplicar estilos que sólo quiero acá 
-                                        claseIndex: 'index',
-                                        blogDB,
-                                        proyectoDB,
-                                        certificadoDB
-                                    });
+                                        })
                                 })
 
 

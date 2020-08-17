@@ -405,6 +405,17 @@ la vista tal cual se ve en un ordenador común se verá en un teléfono de alta 
               h3.subtitulos {
                   margin: .5rem 0;
               }
+
+              @media only screen and (min-width: 768px){
+                  div.entrada{
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: space-between;
+                  }
+
+              }
+
+
               /* Estilos para el blog */
               
               @media only screen and (min-width: 768px) {
@@ -479,6 +490,9 @@ la vista tal cual se ve en un ordenador común se verá en un teléfono de alta 
                   margin: 0 0 10px 0;
               }
               /* Estilo para la tarjeta fotos */
+              
+              
+
               /* Estilos para la tarjeta certificaciones */
               
               @media only screen and (min-width: 768px) {
@@ -487,13 +501,13 @@ la vista tal cual se ve en un ordenador común se verá en un teléfono de alta 
                   }
               }
               
-              .contenido.fotos p {
+              .contenido.fotos p{
                   text-align: center;
-                  font-style: italic;
+                  font-size: 1.5rem;
               }
               
               .img-borde {
-                  border: 10px solid blue;
+                  border: .1px solid white;
               }
               /* La idea es que el footer sólo sea un footer como tal en la versión desktop, en móvil tendremos la información del footer en el sidebar, por eso esta parte es desktop first */
               /* Footer */
